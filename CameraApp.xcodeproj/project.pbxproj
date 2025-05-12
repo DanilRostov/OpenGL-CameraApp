@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		34EC246D2DB7555A00DEA649 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497C50D2DB71F7900D3FF09 /* OpenGL.framework */; };
+		34EC246E2DB7557D00DEA649 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497C50F2DB7210B00D3FF09 /* libGLEW.2.2.0.dylib */; };
+		34EC246F2DB7557D00DEA649 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497C5102DB7210B00D3FF09 /* libglfw.3.4.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		3497C4FD2DB71EC800D3FF09 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		3497C4FF2DB71EC800D3FF09 /* CameraApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CameraApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		3497C50D2DB71F7900D3FF09 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3497C50F2DB7210B00D3FF09 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		3497C5102DB7210B00D3FF09 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34EC246E2DB7557D00DEA649 /* libGLEW.2.2.0.dylib in Frameworks */,
+				34EC246F2DB7557D00DEA649 /* libglfw.3.4.dylib in Frameworks */,
+				34EC246D2DB7555A00DEA649 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3497C5012DB71EC800D3FF09 /* CameraApp */,
+				3497C50C2DB71F7900D3FF09 /* Frameworks */,
 				3497C5002DB71EC800D3FF09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +68,16 @@
 				3497C4FF2DB71EC800D3FF09 /* CameraApp */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3497C50C2DB71F7900D3FF09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3497C50F2DB7210B00D3FF09 /* libGLEW.2.2.0.dylib */,
+				3497C5102DB7210B00D3FF09 /* libglfw.3.4.dylib */,
+				3497C50D2DB71F7900D3FF09 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,20 +267,52 @@
 		3497C5072DB71EC800D3FF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CameraApp/CameraApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 676SGLBX6B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/GL,
+					/opt/homebrew/include/GLFW,
+					/opt/homebrew/include/glm,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		3497C5082DB71EC800D3FF09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CameraApp/CameraApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 676SGLBX6B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					/opt/homebrew/include/GL,
+					/opt/homebrew/include/GLFW,
+					/opt/homebrew/include/glm,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
