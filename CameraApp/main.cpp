@@ -22,19 +22,24 @@ GLuint createShaderProgram()
     const char *vertexShaderSource = R"(
         #version 330 core
         layout(location = 0) in vec3 aPos;
+        layout(location = 1) in vec3 aColor;
+        out vec3 vColor;
         uniform mat4 uProjection;
         uniform mat4 uView;
         uniform mat4 uModel;
+    
         void main() {
+            vColor = aColor;
             gl_Position = uProjection * uView * uModel * vec4(aPos, 1.0);
         }
     )";
 
     const char *fragmentShaderSource = R"(
         #version 330 core
+        in vec3 vColor;
         out vec4 FragColor;
         void main() {
-            FragColor = vec4(1.0, 0.6, 0.3, 1.0);
+            FragColor = vec4(vColor, 1.0);
         }
     )";
 

@@ -14,6 +14,11 @@
 #include <vector>
 #include <glm/glm.hpp>
 
+struct Vertex {
+    glm::vec3 position;
+    glm::vec3 color;
+};
+
 class Mesh {
 public:
     void init();
@@ -22,7 +27,7 @@ public:
 
 private:
     GLuint VAO = 0, VBO = 0, EBO = 0;
-    std::vector<glm::vec3> vertices;
+    std::vector<Vertex> vertices;
     std::vector<GLuint> indices;
 };
 
