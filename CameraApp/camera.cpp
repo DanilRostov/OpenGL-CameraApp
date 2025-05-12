@@ -49,6 +49,11 @@ void Camera::lookAt(const glm::vec3 &eyePos, const glm::vec3 &target, const glm:
     up = upVec;
 }
 
+void Camera::setDragging(bool dragging)
+{
+    this->dragging = dragging;
+}
+
 void Camera::apply(GLuint shaderProgram)
 {
     int width, height;

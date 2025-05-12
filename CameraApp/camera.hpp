@@ -33,6 +33,7 @@ public:
     void setLimits(double xmin, double xmax, double ymin, double ymax, double zmin, double zmax);
     void setScale(double limit);
     void lookAt(const glm::vec3 &eye, const glm::vec3 &target, const glm::vec3 &up);
+    void setDragging(bool dragging);
 
     void onMouseDown(int x, int y);
     void onMouseMove(int x, int y);

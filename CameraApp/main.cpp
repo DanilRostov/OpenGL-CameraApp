@@ -143,6 +143,11 @@ void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
     {
         if (gCamera) gCamera->onMouseDown(static_cast<int>(xpos), static_cast<int>(ypos));
     }
+    
+    if (action == GLFW_RELEASE && button == GLFW_MOUSE_BUTTON_LEFT)
+    {
+        if (gCamera) gCamera->setDragging(false);
+    }
 }
 
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos)
