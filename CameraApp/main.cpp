@@ -14,8 +14,11 @@
 
 Camera* gCamera = nullptr;  // Global camera pointer
 
+glm::mat4 gModelMatrix = glm::mat4(1.0f); // Identity matrix
+
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+void applyTransformMatrix();
 
 GLuint createShaderProgram()
 {
@@ -115,9 +118,10 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
+        
+        applyTransformMatrix();
 
-        glm::mat4 model = buildManualModelMatrix();
-        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "uModel"), 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "uModel"), 1, GL_FALSE, glm::value_ptr(gModelMatrix));
         
         camera.apply(shaderProgram);
         
@@ -154,4 +158,28 @@ void cursorPosCallback(GLFWwindow* window, double xpos, double ypos)
 {
     if (gCamera)
         gCamera->onMouseMove(static_cast<int>(xpos), static_cast<int>(ypos));
+}
+
+void applyTransformMatrix()
+{
+    std::vector<glm::mat4> transformStack;
+    
+    glm::mat4 scale = glm::mat4(1.0f);
+    scale[0][0] = 1.5f;
+    scale[1][1] = 1.0f;
+    scale[2][2] = 1.0f;
+    
+    glm::mat4 rotate = glm::mat4(1.0f);
+    float angle = glfwGetTime();
+    float c = cos(angle);
+    float s = sin(angle);
+    rotate[0][0] = c;
+    rotate[0][1] = -s;
+    rotate[1][0] = s;
+    rotate[1][1] = c;
+    
+    transformStack.push_back(scale);
+    transformStack.push_back(rotate);
+    
+    gModelMatrix = createTransformMatrix(angle, transformStack);
 }

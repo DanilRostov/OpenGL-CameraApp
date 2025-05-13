@@ -22,25 +22,10 @@ glm::mat4 customMultiply(const glm::mat4& A, const glm::mat4& B) {
     return result;
 }
 
-glm::mat4 buildManualModelMatrix() {
-    glm::mat4 scale = glm::mat4(1.0f);
-    scale[0][0] = 1.2f;
-    scale[1][1] = 1.0f;
-    scale[2][2] = 1.0f;
-
-    glm::mat4 shear = glm::mat4(1.0f);
-    shear[1][0] = 0.5f;
-
-    glm::mat4 rotation = glm::mat4(1.0f);
-    float angle = (float)glfwGetTime();
-    float c = cos(angle);
-    float s = sin(angle);
-    rotation[0][0] = c;
-    rotation[0][1] = -s;
-    rotation[1][0] = s;
-    rotation[1][1] = c;
-
-    glm::mat4 model = customMultiply(scale, shear);
-    model = customMultiply(model, rotation);
-    return model;
+glm::mat4 createTransformMatrix(float time, const std::vector<glm::mat4>& transforms) {
+    glm::mat4 result = glm::mat4(1.0f);
+    for (const auto& t : transforms) {
+        result = customMultiply(result, t);
+    }
+    return result;
 }
