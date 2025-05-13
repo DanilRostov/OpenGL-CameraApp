@@ -10,11 +10,11 @@
 #include <iostream>
 #include "camera.hpp"
 #include "mesh.hpp"
+#include "matrix_utils.hpp"
 
 Camera* gCamera = nullptr;  // Global camera pointer
 
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
-
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
 
 GLuint createShaderProgram()
@@ -116,7 +116,7 @@ int main()
 
         glUseProgram(shaderProgram);
 
-        glm::mat4 model = glm::mat4(1.0f);
+        glm::mat4 model = buildManualModelMatrix();
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "uModel"), 1, GL_FALSE, glm::value_ptr(model));
         
         camera.apply(shaderProgram);
