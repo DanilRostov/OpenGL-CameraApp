@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4578E4878BA37F1128842B75 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 92205C35F1004E7093BC308E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				1E872E7C4EA124F95040B55F /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				C7C31CA12DD6456DA1C01465 /* PBXTargetDependency */,
+				E9822626754E413DB2D6C898 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		619CC2DDEBD8853648271479 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 70D43A949E0540B7BC5DC0F8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				5989FBC31C8C6284B52693C2 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		22CC6B6F08C24194A1822A67 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_widgets.cpp */ = {isa = PBXBuildFile; fileRef = 25565A83CE154BAAA6F1E0A8 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_widgets.cpp */; };
+		31A2BB5313794DCC9BA7A024 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/camera.cpp */ = {isa = PBXBuildFile; fileRef = 8E9D9EEDA8CA46E2A34E6FC4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/camera.cpp */; };
+		55400FBAA2364D4AA097984F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E50F04099B2241F0B36A306B /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */; };
+		56FC7DB6DB6E4A09B6F7407A /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework */ = {isa = PBXBuildFile; fileRef = E40DFA76825049C9A7F003FD /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework */; };
+		7E0A8C99E85C463AA2D4788A /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_tables.cpp */ = {isa = PBXBuildFile; fileRef = CAFF3F329246464F966986C3 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_tables.cpp */; };
+		91A6A4137DFF4DD98FA8A1CD /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/main.cpp */ = {isa = PBXBuildFile; fileRef = 73928D393A9241CBB052CD71 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/main.cpp */; };
+		9FCDE336CDA345ED8A8D2C4C /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui.cpp */ = {isa = PBXBuildFile; fileRef = 3B0144C7D0914BBDB26498EB /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui.cpp */; };
+		B24F61C45B7D46DDA6D5ACF2 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXBuildFile; fileRef = D53FE3BC507B492C8CDFCAF4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_glfw.cpp */; };
+		B7DBA1D6584A4CAA8102CBC7 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/mesh.cpp */ = {isa = PBXBuildFile; fileRef = 81873F302D6E48C88C750E39 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/mesh.cpp */; };
+		C1DDF1D20AFE40D184F69663 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils/matrix_utils.cpp */ = {isa = PBXBuildFile; fileRef = D46354DE0DCF41E8A708583F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils/matrix_utils.cpp */; };
+		CD0C256C68D4435EBEA2358F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_opengl3.cpp */ = {isa = PBXBuildFile; fileRef = 6E90801A7C7247B5858E5897 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_opengl3.cpp */; };
+		DB2F16EDA0814B93AB7FAF31 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_draw.cpp */ = {isa = PBXBuildFile; fileRef = 4A3C0FD710BB473DA2CE1EC5 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_draw.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		04DD2A159C8B4D13B3045C87 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		7576E8C47F224221A6491E40 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		8DB99A15144D4BC88D17AEFF /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		BAD96000BEE14560BA908596 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4ECD98E6541C49E09BD3B0C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F7246EA12304EDFB15753FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 619CC2DDEBD8853648271479;
+			remoteInfo = ZERO_CHECK;
+		};
+		518DE7AC43FF4A8DA39D6558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F7246EA12304EDFB15753FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 619CC2DDEBD8853648271479;
+			remoteInfo = ZERO_CHECK;
+		};
+		8D38B92E563347C88A0CC4C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F7246EA12304EDFB15753FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C04EE18D4D0519AF76D75FF2;
+			remoteInfo = CameraApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25565A83CE154BAAA6F1E0A8 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_widgets.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_widgets.cpp; path = imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		2BDFEAE8E2C54141A26AD43F /* CameraApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = CameraApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0144C7D0914BBDB26498EB /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		4A3C0FD710BB473DA2CE1EC5 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		6E90801A7C7247B5858E5897 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_opengl3.cpp; path = imgui/backends/imgui_impl_opengl3.cpp; sourceTree = SOURCE_ROOT; };
+		73928D393A9241CBB052CD71 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		81873F302D6E48C88C750E39 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/mesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mesh.cpp; path = mesh.cpp; sourceTree = SOURCE_ROOT; };
+		8E9D9EEDA8CA46E2A34E6FC4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = camera.cpp; path = camera.cpp; sourceTree = SOURCE_ROOT; };
+		A4F54E7F134E4BD4B0C8EC76 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CAFF3F329246464F966986C3 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_tables.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_tables.cpp; path = imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
+		D46354DE0DCF41E8A708583F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils/matrix_utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix_utils.cpp; path = utils/matrix_utils.cpp; sourceTree = SOURCE_ROOT; };
+		D53FE3BC507B492C8CDFCAF4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_glfw.cpp; path = imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
+		E40DFA76825049C9A7F003FD /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E50F04099B2241F0B36A306B /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA959F7863F54645B64E3D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59F4278950114D368B1F4EBB /* CameraApp */ = {
+			isa = PBXGroup;
+			children = (
+				983B644D648B4D9ABEA87174 /* Source Files */,
+				E50F04099B2241F0B36A306B /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */,
+			);
+			name = CameraApp;
+			sourceTree = "<group>";
+		};
+		5F444DFEE4234A879A546945 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E40DFA76825049C9A7F003FD /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		983B644D648B4D9ABEA87174 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D9EEDA8CA46E2A34E6FC4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/camera.cpp */,
+				D53FE3BC507B492C8CDFCAF4 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_glfw.cpp */,
+				6E90801A7C7247B5858E5897 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_opengl3.cpp */,
+				3B0144C7D0914BBDB26498EB /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui.cpp */,
+				4A3C0FD710BB473DA2CE1EC5 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_draw.cpp */,
+				CAFF3F329246464F966986C3 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_tables.cpp */,
+				25565A83CE154BAAA6F1E0A8 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_widgets.cpp */,
+				73928D393A9241CBB052CD71 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/main.cpp */,
+				81873F302D6E48C88C750E39 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/mesh.cpp */,
+				D46354DE0DCF41E8A708583F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils/matrix_utils.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A044A88C35D3407EB7E84101 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A5021F438A654AA58CD4F77B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BDFEAE8E2C54141A26AD43F /* CameraApp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B46E8E9065BC44B38CABF88F = {
+			isa = PBXGroup;
+			children = (
+				59F4278950114D368B1F4EBB /* CameraApp */,
+				C553E826AE784BC79FC97C68 /* ALL_BUILD */,
+				A5021F438A654AA58CD4F77B /* Products */,
+				5F444DFEE4234A879A546945 /* Frameworks */,
+				A044A88C35D3407EB7E84101 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		C553E826AE784BC79FC97C68 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				CB995C27204A4167B7F53A0C /* CMake Rules */,
+				A4F54E7F134E4BD4B0C8EC76 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		CB995C27204A4167B7F53A0C /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C04EE18D4D0519AF76D75FF2 /* CameraApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683BF7B6B81543F1AE271AE1 /* Build configuration list for PBXNativeTarget "CameraApp" */;
+			buildPhases = (
+				387C4D751908407F8BECE6CF /* Sources */,
+				DA959F7863F54645B64E3D78 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88E7363B2C554828A3327CB6 /* PBXTargetDependency */,
+			);
+			name = CameraApp;
+			productName = CameraApp;
+			productReference = 2BDFEAE8E2C54141A26AD43F /* CameraApp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F7246EA12304EDFB15753FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
+			};
+			buildConfigurationList = 52B831E1BE4F45B99E9641DE /* Build configuration list for PBXProject "CameraApp" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				7576E8C47F224221A6491E40 /* Debug */,
+				8DB99A15144D4BC88D17AEFF /* Release */,
+				BAD96000BEE14560BA908596 /* MinSizeRel */,
+				04DD2A159C8B4D13B3045C87 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = B46E8E9065BC44B38CABF88F;
+			projectDirPath = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp;
+			projectRoot = "";
+			targets = (
+				4578E4878BA37F1128842B75 /* ALL_BUILD */,
+				C04EE18D4D0519AF76D75FF2 /* CameraApp */,
+				619CC2DDEBD8853648271479 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E872E7C4EA124F95040B55F /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5989FBC31C8C6284B52693C2 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  make -f /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  make -f /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  make -f /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build
+  make -f /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		387C4D751908407F8BECE6CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A2BB5313794DCC9BA7A024 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/camera.cpp */,
+				B24F61C45B7D46DDA6D5ACF2 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_glfw.cpp */,
+				CD0C256C68D4435EBEA2358F /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends/imgui_impl_opengl3.cpp */,
+				9FCDE336CDA345ED8A8D2C4C /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui.cpp */,
+				DB2F16EDA0814B93AB7FAF31 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_draw.cpp */,
+				7E0A8C99E85C463AA2D4788A /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_tables.cpp */,
+				22CC6B6F08C24194A1822A67 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/imgui_widgets.cpp */,
+				91A6A4137DFF4DD98FA8A1CD /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/main.cpp */,
+				B7DBA1D6584A4CAA8102CBC7 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/mesh.cpp */,
+				C1DDF1D20AFE40D184F69663 /* /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils/matrix_utils.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88E7363B2C554828A3327CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 619CC2DDEBD8853648271479 /* ZERO_CHECK */;
+			targetProxy = 4ECD98E6541C49E09BD3B0C7 /* PBXContainerItemProxy */;
+		};
+		C7C31CA12DD6456DA1C01465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C04EE18D4D0519AF76D75FF2 /* CameraApp */;
+			targetProxy = 8D38B92E563347C88A0CC4C4 /* PBXContainerItemProxy */;
+		};
+		E9822626754E413DB2D6C898 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 619CC2DDEBD8853648271479 /* ZERO_CHECK */;
+			targetProxy = 518DE7AC43FF4A8DA39D6558 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		050F1CB6495546C7B1023075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/opt/homebrew/Cellar/glew/2.2.0_1/include,/opt/homebrew/Cellar/glfw/3.4/include,/opt/homebrew/include,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib /opt/homebrew/Cellar/glfw/3.4/lib","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glew/2.2.0_1/lib,"/opt/homebrew/Cellar/glfw/3.4/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glfw/3.4/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-lGLEW","-lglfw","-framework OpenGL","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CameraApp;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build/CameraApp.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		147B20BCAB2A42F0819F7961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		17010389257F49AE9DDB7D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		1A8678E759AD431291275ABE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/opt/homebrew/Cellar/glew/2.2.0_1/include,/opt/homebrew/Cellar/glfw/3.4/include,/opt/homebrew/include,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib /opt/homebrew/Cellar/glfw/3.4/lib","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glew/2.2.0_1/lib,"/opt/homebrew/Cellar/glfw/3.4/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glfw/3.4/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-lGLEW","-lglfw","-framework OpenGL","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CameraApp;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build/CameraApp.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		2654A49D461343EDBD0099CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		3E8DFB1176A24D1BB1367659 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build;
+			};
+			name = MinSizeRel;
+		};
+		449C7E03088144D4BC4A99EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		50BDD9FEC83344668891D44C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6B47ACF724D041A4B3F98934 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		770A41B1A832401D9B844E4A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B96FFE96612D4D67AA5F9C36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build;
+			};
+			name = Debug;
+		};
+		C292E16220C3428CB7C1C3AB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D19307EBEB3D40A789D425FE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/opt/homebrew/Cellar/glew/2.2.0_1/include,/opt/homebrew/Cellar/glfw/3.4/include,/opt/homebrew/include,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib /opt/homebrew/Cellar/glfw/3.4/lib","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glew/2.2.0_1/lib,"/opt/homebrew/Cellar/glfw/3.4/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glfw/3.4/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-lGLEW","-lglfw","-framework OpenGL","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CameraApp;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build/CameraApp.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DFE094CE336E4EB78CFFDA31 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/opt/homebrew/Cellar/glew/2.2.0_1/include,/opt/homebrew/Cellar/glfw/3.4/include,/opt/homebrew/include,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/imgui/backends,/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/utils,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib /opt/homebrew/Cellar/glfw/3.4/lib","$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/Cellar/glew/2.2.0_1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glew/2.2.0_1/lib,"/opt/homebrew/Cellar/glfw/3.4/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/Cellar/glfw/3.4/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-lGLEW","-lglfw","-framework OpenGL","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CameraApp;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build/CameraApp.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EF354BD15EF243508CD98F30 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		FB5FA0B213664785B41C5D0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/build;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B831E1BE4F45B99E9641DE /* Build configuration list for PBXProject "CameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96FFE96612D4D67AA5F9C36 /* Debug */,
+				FB5FA0B213664785B41C5D0A /* Release */,
+				3E8DFB1176A24D1BB1367659 /* MinSizeRel */,
+				EF354BD15EF243508CD98F30 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		683BF7B6B81543F1AE271AE1 /* Build configuration list for PBXNativeTarget "CameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8678E759AD431291275ABE /* Debug */,
+				050F1CB6495546C7B1023075 /* Release */,
+				D19307EBEB3D40A789D425FE /* MinSizeRel */,
+				DFE094CE336E4EB78CFFDA31 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		70D43A949E0540B7BC5DC0F8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17010389257F49AE9DDB7D87 /* Debug */,
+				449C7E03088144D4BC4A99EE /* Release */,
+				770A41B1A832401D9B844E4A /* MinSizeRel */,
+				C292E16220C3428CB7C1C3AB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		92205C35F1004E7093BC308E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147B20BCAB2A42F0819F7961 /* Debug */,
+				2654A49D461343EDBD0099CE /* Release */,
+				50BDD9FEC83344668891D44C /* MinSizeRel */,
+				6B47ACF724D041A4B3F98934 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F7246EA12304EDFB15753FE /* Project object */;
+}

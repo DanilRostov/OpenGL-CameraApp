@@ -5,9 +5,15 @@
 //  Created by Danil Rostov on 4/21/25.
 //
 
+#include <iostream>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include "camera.hpp"
 #include "mesh.hpp"
 #include "matrix_utils.hpp"
@@ -18,7 +24,8 @@ glm::mat4 gModelMatrix = glm::mat4(1.0f); // Identity matrix
 
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
-void applyTransformMatrix();
+//void applyTransformMatrix();
+void renderMatrixEditor(float* inputMatrix, bool& applyMatrix);
 
 GLuint createShaderProgram()
 {
@@ -86,6 +93,16 @@ int main()
     }
     glfwMakeContextCurrent(window);
     
+    // Init ImGui
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+    
     glfwSetMouseButtonCallback(window, mouseButtonCallback);
     glfwSetCursorPosCallback(window, cursorPosCallback);
 
@@ -114,24 +131,46 @@ int main()
 
     while (!glfwWindowShouldClose(window))
     {
-        glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        // ImGui window
+        static float inputMatrix[16] = {
+            1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1
+        };
+        static bool applyMatrix = false;
+
+        renderMatrixEditor(inputMatrix, applyMatrix);
+        
+        if (applyMatrix) {
+            gModelMatrix = glm::transpose(glm::make_mat4(inputMatrix));
+            applyMatrix = false;
+        }
+
+        // Draw scene
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
         glUseProgram(shaderProgram);
-        
-        applyTransformMatrix();
-
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "uModel"), 1, GL_FALSE, glm::value_ptr(gModelMatrix));
-        
         camera.apply(shaderProgram);
-        
         mesh.draw();
+        
+        // Render UI
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
     mesh.cleanup();
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
 
     glfwDestroyWindow(window);
     glfwTerminate();
@@ -140,6 +179,12 @@ int main()
 
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 {
+    // Forward to ImGui
+    ImGui_ImplGlfw_MouseButtonCallback(window, button, action, mods);
+    
+    if (ImGui::GetIO().WantCaptureMouse)
+        return;
+    
     double xpos, ypos;
     glfwGetCursorPos(window, &xpos, &ypos);
 
@@ -156,30 +201,34 @@ void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 
 void cursorPosCallback(GLFWwindow* window, double xpos, double ypos)
 {
+    // Forward to ImGui
+    ImGui_ImplGlfw_CursorPosCallback(window, xpos, ypos);
+    
+    if (ImGui::GetIO().WantCaptureMouse)
+        return;
+
     if (gCamera)
         gCamera->onMouseMove(static_cast<int>(xpos), static_cast<int>(ypos));
 }
 
-void applyTransformMatrix()
-{
-    std::vector<glm::mat4> transformStack;
-    
-    glm::mat4 scale = glm::mat4(1.0f);
-    scale[0][0] = 1.5f;
-    scale[1][1] = 1.0f;
-    scale[2][2] = 1.0f;
-    
-    glm::mat4 rotate = glm::mat4(1.0f);
-    float angle = glfwGetTime();
-    float c = cos(angle);
-    float s = sin(angle);
-    rotate[0][0] = c;
-    rotate[0][1] = -s;
-    rotate[1][0] = s;
-    rotate[1][1] = c;
-    
-    transformStack.push_back(scale);
-    transformStack.push_back(rotate);
-    
-    gModelMatrix = createTransformMatrix(angle, transformStack);
+void renderMatrixEditor(float* inputMatrix, bool& applyMatrix) {
+    ImGui::Begin("Matrix Editor", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+
+    ImGui::SetWindowSize(ImVec2(300, 0), ImGuiCond_FirstUseEver);
+
+    ImGui::PushItemWidth(280);
+
+    for (int row = 0; row < 4; ++row) {
+        ImGui::PushID(row);
+        ImGui::InputFloat4("", &inputMatrix[row * 4]);
+        ImGui::PopID();
+    }
+
+    ImGui::PopItemWidth();
+
+    if (ImGui::Button("Apply")) {
+        applyMatrix = true;
+    }
+
+    ImGui::End();
 }

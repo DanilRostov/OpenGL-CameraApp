@@ -1,12 +1,12 @@
 # CameraApp
 
-A modern C++ and OpenGL application featuring a custom orbit-style camera, interactive mouse controls, and real-time 3D cube rendering with matrix transformations.
+A modern C++ and OpenGL application featuring a custom orbit-style camera, interactive mouse controls, and real-time 3D cube custom matrix rendering.
 
 ## Features
 
 - 3D cube mesh with per-face coloring
 - Interactive arcball camera (mouse drag to rotate)
-- Real-time transformation support (rotation, shear, etc.)
+- Real-time 4×4 matrix transformation editor using ImGui
 - Built with modern OpenGL (GLFW + GLEW + GLSL)
 - Uses GLM for matrix and vector math
 
@@ -18,10 +18,13 @@ A modern C++ and OpenGL application featuring a custom orbit-style camera, inter
 - **GLEW** – OpenGL extensions
 - **GLM** – math library (matrices, vectors)
 - **CMake** *(optional for build system)*
+- **Dear ImGui – immediate-mode GUI*
+- **CMake – cross-platform build system*
+- **Xcode – native IDE and debugger (optional)*
 
 ## Preview
 
-> _Mesh rendering in action_
+> _Live matrix editing and camera orbit in action_
 
 ![screenshot](./CameraApp/assets/preview.png)
 
@@ -36,16 +39,22 @@ A modern C++ and OpenGL application featuring a custom orbit-style camera, inter
 - [Homebrew](https://brew.sh)
 
 ```bash
-brew install glfw glew glm
+brew install glfw glew glm cmake
 ```
 
-### compile using Clang
+### Build via CMake + Xcode
 
 ```bash
-clang++ main.cpp mesh.cpp camera.cpp -std=c++17 \
-    -framework OpenGL -lglfw -lGLEW -o CameraApp
-./CameraApp
+mkdir build
+cd build
+cmake -G Xcode ..
+open CameraApp.xcodeproj
+
 ```
 ---
 
-Tested on macOS 15.4.1 with Clang and OpenGL.framework
+### Tested on
+
+- macOS Sonoma 15.4.1
+- Xcode 15+
+- Clang 15+, CMake 3.29+

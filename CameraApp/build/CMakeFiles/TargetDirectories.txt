@@ -1,0 +1,3 @@
+/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeFiles/CameraApp.dir
+/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeFiles/ALL_BUILD.dir
+/Users/danilrostov/Desktop/projects/apple/CameraApp/CameraApp/build/CMakeFiles/ZERO_CHECK.dir
